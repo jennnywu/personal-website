@@ -10,24 +10,24 @@ jQuery(document).ready(function(){
 	
 	// here all ready functions
 	
-	tokyo_tm_modalbox();
-	tokyo_tm_page_transition();
-	tokyo_tm_trigger_menu();
-	tokyo_tm_service_popup();
-	tokyo_tm_modalbox_news();
-	tokyo_tm_modalbox_portfolio();
-	tokyo_tm_my_progress();
-	tokyo_tm_projects();
-	tokyo_tm_portfolio();
-	tokyo_tm_cursor();
-	tokyo_tm_imgtosvg();
-	tokyo_tm_popup();
-	tokyo_tm_data_images();
-	tokyo_tm_contact_form();
-	tokyo_tm_owl_carousel();
+	modalbox();
+	page_transition();
+	trigger_menu();
+	service_popup();
+	modalbox_news();
+	modalbox_portfolio();
+	my_progress();
+	projects();
+	portfolio();
+	cursor();
+	imgtosvg();
+	popup();
+	data_images();
+	contact_form();
+	owl_carousel();
 	
 	jQuery(window).load('body', function(){
-		tokyo_tm_my_load();
+		my_load();
 	});
 	
 });
@@ -40,31 +40,31 @@ jQuery(document).ready(function(){
 // --------------------   MODALBOX    ------------------
 // -----------------------------------------------------
 
-function tokyo_tm_modalbox(){
+function modalbox(){
 	"use strict";
 	
-	jQuery('.tokyo_tm_all_wrap').prepend('<div class="tokyo_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
+	jQuery('.all_wrap').prepend('<div class="modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
 }
 
 // -----------------------------------------------------
 // -------------   PAGE TRANSITION    ------------------
 // -----------------------------------------------------
 
-function tokyo_tm_page_transition(){
+function page_transition(){
 	
 	"use strict";
 	
-	var section 		= jQuery('.tokyo_tm_section');
+	var section 		= jQuery('.section');
 	var allLi 			= jQuery('.transition_link li');
 	var button			= jQuery('.transition_link a');
-	var wrapper 		= jQuery('.tokyo_tm_all_wrap');
+	var wrapper 		= jQuery('.all_wrap');
 	var enter	 		= wrapper.data('enter');
 	var exit		 	= wrapper.data('exit');
 	
 	button.on('click',function(){
 		var element 	= jQuery(this);
 		var href		= element.attr('href');
-		if(element.parent().hasClass('tokyo_tm_button')){
+		if(element.parent().hasClass('button')){
 			jQuery('.menu .transition_link a[href="'+href+'"]').trigger('click');
 			hashtag();
 			return false;
@@ -91,13 +91,13 @@ function tokyo_tm_page_transition(){
 // ---------------   TRIGGER MENU    -------------------
 // -----------------------------------------------------
 
-function tokyo_tm_trigger_menu(){
+function trigger_menu(){
 	
 	"use strict";
 
-	var hamburger 		= jQuery('.tokyo_tm_topbar .trigger .hamburger');
-	var mobileMenu		= jQuery('.tokyo_tm_mobile_menu');
-	var mobileMenuList	= jQuery('.tokyo_tm_mobile_menu ul li a');
+	var hamburger 		= jQuery('.topbar .trigger .hamburger');
+	var mobileMenu		= jQuery('.mobile_menu');
+	var mobileMenuList	= jQuery('.mobile_menu ul li a');
 
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
@@ -113,7 +113,7 @@ function tokyo_tm_trigger_menu(){
 	});
 	
 	mobileMenuList.on('click',function(){
-		jQuery('.tokyo_tm_topbar .trigger .hamburger').removeClass('is-active');
+		jQuery('.topbar .trigger .hamburger').removeClass('is-active');
 		mobileMenu.removeClass('opened');
 		return false;
 	});
@@ -123,24 +123,24 @@ function tokyo_tm_trigger_menu(){
 // -------------  SERVICE POPUP  -------------------
 // -------------------------------------------------
 
-function tokyo_tm_service_popup(){
+function service_popup(){
 	
 	"use strict";
 	
-	var modalBox		= jQuery('.tokyo_tm_modalbox');
-	var button			= jQuery('.tokyo_tm_services .tokyo_tm_full_link');
+	var modalBox		= jQuery('.modalbox');
+	var button			= jQuery('.services .full_link');
 	var closePopup		= modalBox.find('.close');
 	
 	button.on('click',function(){
 		var element = jQuery(this);
-		var parent	= element.closest('.tokyo_tm_services .list ul li');
+		var parent	= element.closest('.services .list ul li');
 		var elImage	= parent.find('.popup_service_image').attr('src');
 		var title	= parent.find('.title').text();
 		var content = parent.find('.service_hidden_details').html();
 		modalBox.addClass('opened');
 		modalBox.find('.description_wrap').html(content);
 		modalBox.find('.service_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+elImage+'"></div></div>');
-		tokyo_tm_data_images();
+		data_images();
 		modalBox.find('.service_popup_informations .image').after('<div class="main_title"><h3>'+title+'</h3></div>');
 		return false;
 	});
@@ -155,18 +155,18 @@ function tokyo_tm_service_popup(){
 // -------------  MODALBOX NEWS  -------------------
 // -------------------------------------------------
 
-function tokyo_tm_modalbox_news(){
+function modalbox_news(){
 	
 	"use strict";
 	
-	var modalBox	= jQuery('.tokyo_tm_modalbox');
-	var list 		= jQuery('.tokyo_tm_news ul li');
+	var modalBox	= jQuery('.modalbox');
+	var list 		= jQuery('.news ul li');
 	var closePopup	= modalBox.find('.close');
 	
 	list.each(function(){
 		var element 	= jQuery(this);
 		var details 	= element.find('.list_inner').html();
-		var buttons 	= element.find('.details .title a,.tokyo_tm_full_link,.tokyo_tm_read_more a');
+		var buttons 	= element.find('.details .title a,.full_link,.read_more a');
 		var mainImage	= element.find('.main');
 		var imgData		= mainImage.data('img-url');
 		var title		= element.find('.title');
@@ -179,7 +179,7 @@ function tokyo_tm_modalbox_news(){
 			mainImage.css({backgroundImage: 'url('+imgData+')'});
 			title = modalBox.find('.title');
 			title.html(titleHref);
-			tokyo_tm_imgtosvg();
+			imgtosvg();
 			return false;
 		});
 	});
@@ -195,12 +195,12 @@ function tokyo_tm_modalbox_news(){
 // -------------  MODALBOX PORTFOLIO  --------------
 // -------------------------------------------------
 
-function tokyo_tm_modalbox_portfolio(){
+function modalbox_portfolio(){
 	
 	"use strict";
 	
-	var modalBox	= jQuery('.tokyo_tm_modalbox');
-	var button		= jQuery('.tokyo_tm_portfolio .popup_info');
+	var modalBox	= jQuery('.modalbox');
+	var button		= jQuery('.portfolio .popup_info');
 	
 	button.on('click',function(){
 		var element 	= jQuery(this);
@@ -215,7 +215,7 @@ function tokyo_tm_modalbox_portfolio(){
 		modalBox.find('.description_wrap').html(details);
 		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title"><h3>'+title+'</h3><span>'+category+'</span><div>');	
-		tokyo_tm_data_images();
+		data_images();
 		return false;
 	});
 }
@@ -224,40 +224,40 @@ function tokyo_tm_modalbox_portfolio(){
 // -----------------    PORTFOLIO    ---------------
 // -------------------------------------------------
 
-function tokyo_tm_projects() {
+function projects() {
 	
 	"use strict";
 	
-	jQuery('.tokyo_tm_portfolio_animation_wrap').each(function() {
+	jQuery('.portfolio_animation_wrap').each(function() {
 		jQuery(this).on('mouseenter', function() {
 			if (jQuery(this).data('title')) {
-				jQuery('.tokyo_tm_portfolio_titles').html(jQuery(this).data('title') + '<span class="work__cat">' + jQuery(this).data('category') + '</span>');
-				jQuery('.tokyo_tm_portfolio_titles').addClass('visible');
+				jQuery('.portfolio_titles').html(jQuery(this).data('title') + '<span class="work__cat">' + jQuery(this).data('category') + '</span>');
+				jQuery('.portfolio_titles').addClass('visible');
 			}
 
 			jQuery(document).on('mousemove', function(e) {
-				jQuery('.tokyo_tm_portfolio_titles').css({
+				jQuery('.portfolio_titles').css({
 					left: e.clientX - 10,
 					top: e.clientY + 25
 				});
 			});
 		}).on('mouseleave', function() {
-			jQuery('.tokyo_tm_portfolio_titles').removeClass('visible');
+			jQuery('.portfolio_titles').removeClass('visible');
 		});
 	});
 }
 
 // filterable 
 
-function tokyo_tm_portfolio(){
+function portfolio(){
 
 	"use strict";
 
 	if(jQuery().isotope) {
 
 		// Needed variables
-		var list 		 = jQuery('.tokyo_tm_portfolio .portfolio_list');
-		var filter		 = jQuery('.tokyo_tm_portfolio .portfolio_filter ul');
+		var list 		 = jQuery('.portfolio .portfolio_list');
+		var filter		 = jQuery('.portfolio .portfolio_filter ul');
 
 		if(filter.length){
 			// Isotope Filter 
@@ -288,7 +288,7 @@ function tokyo_tm_portfolio(){
 // -------------  PROGRESS BAR  --------------------
 // -------------------------------------------------
 
-function tokyo_tm_my_progress(){
+function my_progress(){
 	"use strict";
 	
 	var list = jQuery('.tokyo_progress .progress_inner');
@@ -305,7 +305,7 @@ function tokyo_tm_my_progress(){
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
 
-function tokyo_tm_preloader(){
+function preloader(){
 	
 	"use strict";
 	
@@ -329,19 +329,19 @@ function tokyo_tm_preloader(){
 // -----------------   MY LOAD    ----------------------
 // -----------------------------------------------------
 
-function tokyo_tm_my_load(){
+function my_load(){
 	
 	"use strict";
 	
 	var speed	= 500;
-	setTimeout(function(){tokyo_tm_preloader();},speed);
+	setTimeout(function(){preloader();},speed);
 }
 
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
 // -----------------------------------------------------
 
-function tokyo_tm_cursor(){
+function cursor(){
     "use strict";
 	
 	var myCursor	= jQuery('.mouse-cursor');
@@ -367,7 +367,7 @@ function tokyo_tm_cursor(){
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-function tokyo_tm_imgtosvg(){
+function imgtosvg(){
 	
 	"use strict";
 	
@@ -401,7 +401,7 @@ function tokyo_tm_imgtosvg(){
 // --------------------   POPUP    ---------------------
 // -----------------------------------------------------
 
-function tokyo_tm_popup(){
+function popup(){
 	
 	"use strict";
 
@@ -440,7 +440,7 @@ function tokyo_tm_popup(){
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
 
-function tokyo_tm_data_images(){
+function data_images(){
 	
 	"use strict";
 	
@@ -457,7 +457,7 @@ function tokyo_tm_data_images(){
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
 
-function tokyo_tm_contact_form(){
+function contact_form(){
 	
 	"use strict";
 	
@@ -503,11 +503,11 @@ function tokyo_tm_contact_form(){
 // ----------------    OWL CAROUSEL    -----------------
 // -----------------------------------------------------
 
-function tokyo_tm_owl_carousel(){
+function owl_carousel(){
 
 	"use strict";
 	
-	var carousel			= jQuery('.tokyo_tm_testimonials .owl-carousel');
+	var carousel			= jQuery('.testimonials .owl-carousel');
 	
 	carousel.owlCarousel({
 		loop: true,
