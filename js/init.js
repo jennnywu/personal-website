@@ -291,7 +291,7 @@ function portfolio(){
 function my_progress(){
 	"use strict";
 	
-	var list = jQuery('.tokyo_progress .progress_inner');
+	var list = jQuery('.progress .progress_inner');
 	list.each(function(){
 		var element = jQuery(this);
 		var bar		= element.find('.bar_in');
