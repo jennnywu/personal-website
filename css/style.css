@@ -347,10 +347,10 @@ a{
 	max-width: 150px;
 }
 .all_wrap .leftpart .logo h3{
-	font-family: "Poppins";
-	font-weight: 900;
+	font-family: "Montserrat";
+	font-weight: 800;
 	font-size: 31px;
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 }
 .all_wrap .leftpart .logo[data-type="image"] img{display: inline-block;}
 .all_wrap .leftpart .logo[data-type="image"] h3{display: none;}
@@ -531,7 +531,7 @@ a{
 }
 .home .details .name{
 	font-size: 55px;
-	font-weight: 800;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 14px;
 }
