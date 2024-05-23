@@ -8,8 +8,6 @@ $php_name = $_POST['ajax_name'];
 $php_email = $_POST['ajax_email'];
 $php_message = $_POST['ajax_message'];
 
-
-
 //Sanitizing email
 $php_email = filter_var($php_email, FILTER_SANITIZE_EMAIL);
 
@@ -42,7 +40,6 @@ if (filter_var($php_email, FILTER_VALIDATE_EMAIL)) {
 		// Send mail by PHP Mail Function
 		mail($php_main_email, $php_subject, $php_sendmessage, $php_headers);
 		echo "";
-	
 	
 } else {
 	echo "<span class='contact_error'>* Invalid email *</span>";
