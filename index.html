@@ -110,7 +110,7 @@
 								</div>
 								<div class="details">
 									<h3 class="name">Jenny <span>Wu</span></h3>
-									<p class="job">I'm a Biomedical Engineering student at the University of Waterloo. Welcome :)</p>
+									<p class="job">I'm a Biomedical Engineering new grad at the University of Waterloo. Welcome :)</p>
 									<div class="social">
 										<ul>
 											<li><a href="https://www.linkedin.com/in/jenny-wu2003/" target="_blank"><i class="icon-linkedin-squared"></i></a></li>
@@ -394,6 +394,7 @@
 									<div class="portfolio_filter">
 										<ul>
 											<li><a href="#" class="current" data-filter="*">All</a></li>
+											<li><a href="#" data-filter=".Altium">Altium</a></li>
 											<li><a href="#" data-filter=".Arduino">Arduino</a></li>
 											<li><a href="#" data-filter=".Cs">C#</a></li>
 											<li><a href="#" data-filter=".Cpp">C++</a></li>
@@ -408,6 +409,83 @@
 							</div>
 							<div class="list_wrapper">
 								<ul class="portfolio_list gallery_zoom">
+									
+									<li class="Altium DSP I2S RaspberryPi">
+										<div class="inner">
+											<div class="entry portfolio_animation_wrap" data-title="VocalPoint" data-category="Altium, DSP, I2S, Raspberry Pi, ESP32">
+												<a class="popup_info" href="#">
+													<img src="img/thumbs/1-1.jpg" alt="" />
+													<div class="abs_image" data-img-url="img/portfolio/vocalpoint/vocalpoint-thumbnail.jpg"></div>
+												</a>
+											</div>
+										</div>
+										
+										<!-- Portfolio Popup Start -->
+										<div class="details_all_wrap">
+											<div class="popup_details">
+												<div class="main_details">
+													<div class="textbox">
+														<p>
+															VocalPoint, a portable assistive listening device designed to improve speech clarity in noisy,
+															multi-speaker environments for hearing aid users, was my university capstone project.
+														</p>
+														<p>
+															VocalPoint uses a microphone array and real-time signal processing to isolate and amplify a target 
+															speaker's voice while suppressing background noise. The system is built around an ESP32 microcontroller 
+															and a Raspberry Pi, utilizing Altium-designed custom PCBs for audio input and output. The device processes 
+															audio using digital signal processing (DSP) techniques, including beamforming and noise reduction algorithms, 
+															implemented in C++ and Python. Audio data is transmitted via I2S to the Raspberry Pi for processing, and the 
+															final output is sent to Bluetooth headphones for a seamless listening experience.
+														</p>
+														<p>
+															I designed parts of the electrical schematic, and implemented the PCB layout in Altium for a Raspberry Pi CM5 
+															carrier PCB, incportating USB-C Power Delivery, a 3V3 buck converter, XIAO ESP32 for communication with a mobile 
+															application, multi-microphone audio sources, and PCIe connectors for impedance controlled, high-speed peripheral 
+															communication to a Hailo-8 neural network accelerator.
+														</p>
+													</div>
+													<div class="detailbox">
+														<ul>
+															<span class="first">Links</span>
+															<span><a href="https://github.com/Hearable-Dongle" target="_blank">GitHub Repository</a></span>														</ul>
+														<ul>
+															<span class="first">Date</span>
+															<span>Sept. 2025 - Apr. 2026</span>
+														</ul>
+													</div>
+												</div>
+												<div class="additional_images">
+													<ul>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-3.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/vocalpoint/vocalpoint1.png"></div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-2.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/vocalpoint/vocalpoint2.png"></div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<div class="list_inner">
+																<div class="my_image">
+																	<img src="img/thumbs/4-2.jpg" alt="" />
+																	<div class="main" data-img-url="img/portfolio/vocalpoint/vocalpoint3.png"></div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- /Portfolio Popup End -->
+									</li>
 									
 									<li class="Cpp Javascript RaspberryPi Python">
 										<div class="inner">
