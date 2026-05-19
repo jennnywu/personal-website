@@ -206,12 +206,19 @@ section {
     display: grid;
     grid-template-columns: 420px 1fr;
     gap: 100px;
-    align-items: center;
+    align-items: stretch;
+}
+
+.about-image {
+    height: 100%;
 }
 
 .about-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 28px;
+    display: block;
 }
 
 .about-content h2 {
@@ -840,10 +847,7 @@ section {
     color: #244733;
     font-size: 40px;
     cursor: pointer;
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        border-color .25s ease;
+    transition: transform .25s ease, background .25s ease, border-color .25s ease;
     z-index: 1001;
 }
 
