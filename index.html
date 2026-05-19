@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenny Wu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="dropdown">
+            <button class="dropbtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="subtitle">Biomedical Engineering • Hardware • Embedded Systems</p>
+            <h1>Jenny Wu's <br>Portfolio</h1>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-title">About Me</div>
+        <div class="about-layout">
+            <div class="about-image">
+                <img src="assets/profile.jpg" alt="Jenny Wu">
+            </div>
+
+            <div class="about-content">
+                <h2>Hello!</h2>
+                <p>I recently graduated from the University of Waterloo with a Bachelor's degree in Biomedical Engineering, along with a Computing Option and a Medical Artificial Intelligence Specialization.</p>
+                <p>I enjoy building multidisciplinary systems across hardware, embedded software, robotics, and mechanical design, with a focus on human factors.</p>
+                <p>This portfolio showcases some of my work in biomedical engineering, hardware design, and embedded systems.</p>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/jenny-wu2003" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/jennnywu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.goodreads.com/user/show/101038996-jenny-wu" target="_blank"><i class="fa-brands fa-goodreads-g"></i></a>
+                </div>
+                
+                <div class="about-buttons">
+                    <a href="assets/Jenny-Wu-Resume.pdf" target="_blank">My Resume</a>
+                    <!-- <a href="assets/Jenny-Wu-Portfolio.pdf" target="_blank">My Portfolio</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="section-title">Projects</div>
+        <div class="projects">
+            <div class="project" onclick="openModal('vocalpoint-modal')" data-tags="Altium, PCB Design, Raspberry Pi CM5, Bluetooth, DSP">
+                <img src="assets/projects/vocalpoint/vocalpoint-thumbnail.jpg" alt="VocalPoint project">
+                <h3><span>VocalPoint — Capstone Project</span></h3>
+                <p>Assistive listening device with custom PCB and real-time audio processing.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('snailtype-modal')" data-tags="JavaScript, HTML, CSS, Game Dev">
+                <img src="assets/projects/snailtype/snailtype-thumbnail.png" alt="SnailType project">
+                <h3><span>snailtype</span></h3>
+                <p>Typing practice game combining animated gameplay, scoring, and keyboard interaction.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('boxdj-modal')" data-tags="ESP32, FreeRTOS, Raspberry Pi, I2C, Audio Processing, Web Development">
+                <img src="assets/projects/boxdj/boxdj-thumbnail.png" alt="Box DJ project">
+                <h3><span>Box DJ</span></h3>
+                <p>Portable DJ mixing system integrating embedded controls, audio processing, and Spotify integration.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('cafe-modal')" data-tags="JavaScript, HTML, CSS">
+                <img src="assets/projects/cafe/cafe-thumbnail.png" alt="i miss my cafe project">
+                <h3><span>i miss my cafe</span></h3>
+                <p>Ambient study application combining task management and customizable background audio.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+            
+            <div class="project" onclick="openModal('pomodoro-modal')" data-tags="JavaScript, HTML, CSS">
+                <img src="assets/projects/pomodoro/pomodoro-thumbnail.png" alt="Pomodoro Timer project">
+                <h3><span>Pomodoro Timer</span></h3>
+                <p>Web-based productivity application implementing customizable Pomodoro work cycles and themes.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('rccar-modal')" data-tags="Arduino, SolidWorks, Bluetooth, Embedded">
+                <img src="assets/projects/rccar/rccar-thumbnail.jpg" alt="Remote Controlled Car project">
+                <h3><span>Remote Controlled Car</span></h3>
+                <p>Bluetooth-controlled vehicle integrating embedded electronics, motor control, and custom mechanical design.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('handrehab-modal')" data-tags="Arduino, SolidWorks, Assistive Tech, Mechanical Design">
+                <img src="assets/projects/handrehab/handrehab-thumbnail.jpg" alt="Hand Rehabilitation Device project">
+                <h3><span>Hand Rehabilitation Device</span></h3>
+                <p>Assistive rehabilitation device designed to support finger mobility recovery.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('ebike-modal')" data-tags="C++, SolidWorks, Firmware, Mechanical Design">
+                <img src="assets/projects/ebike/ebike-thumbnail.jpg" alt="Electric Bicycle project">
+                <h3><span>Electric Bicycle</span></h3>
+                <p>Student design project building a fully functional electric bicycle from the ground up.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('adapter-modal')" data-tags="KiCAD, PCB Design, USB-C, Hardware Bring-Up, Debugging">
+                <img src="assets/projects/adapter/adapter-thumbnail.png" alt="USB-C PICkit Adapter project">
+                <h3><span>USB-C PICkit Adapter</span></h3>
+                <p>Custom PCB adapter enabling USB-C compatibility for PICkit 4 debugging workflows.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('sslchecker-modal')" data-tags="Python, SSL, Networking">
+                <img src="assets/projects/sslchecker/sslchecker-thumbnail.jpg" alt="SSL Certificate Checker">
+                <h3><span>SSL Certificate Checker</span></h3>
+                <p>Python tool for monitoring SSL certificate validity and website security status.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-title">Experience</div>
+        <div class="timeline">
+            <div class="exp-card" onclick="openModal('fce-modal')" data-tags="Mechatronics, OpenCV, Python, PCB Design, Altium, Automation, SolidWorks">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">May 2024 — June 2025</span>
+                        <h3>FuelCell Energy</h3>
+                        <p>Mechatronics Engineering Intern</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Calgary, AB, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card" onclick="openModal('attest-modal')" data-tags="Firmware, Embedded C, KiCAD, PCB Bring-Up, Debugging, Testing">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">Sept 2023 — May 2024</span>
+                        <h3>Attest Laboratories</h3>
+                        <p>Firmware Engineering Intern</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Toronto, ON, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card" onclick="openModal('hawaii-modal')" data-tags="Research, Prototyping, Testing, VBA">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">Jan 2023 — Apr 2023</span>
+                        <h3>University of Hawaiʻi at Mānoa</h3>
+                        <p>Research Assistant</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Honolulu, HI, United States</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card" onclick="openModal('iwc-modal')" data-tags="Leadership, Software Development, Web Development, Community Impact, Project Management">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">Apr 2020 — Mar 2024</span>
+                        <h3>Impact Without Contact</h3>
+                        <p>Co-Founder & Software Developer</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Toronto, ON, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card" onclick="openModal('go-modal')" data-tags="Leadership, Evaluation, Communication, Athletics">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">Aug 2019 — Present</span>
+                        <h3>Gymnastics Ontario</h3>
+                        <p>Artistic Gymnastics Judge</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>ON, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-card" onclick="openModal('asf-modal')" data-tags="Coaching, Leadership, Mentorship, Athletics">
+                <div class="exp-top">
+                    <div class="exp-main">
+                        <span class="exp-date">Jul 2015 — Jun 2022</span>
+                        <h3>Academy Sport and Fitness</h3>
+                        <p>Artistic Gymnastics Coach</p>
+                    </div>
+                    <div class="exp-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Richmond Hill, ON, Canada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-title">Contact</div>
+        <div class="contact-card">
+            <div class="contact-header">
+                <p class="contact-kicker">Available for hardware, embedded systems, and robotics opportunities.</p>
+                <h2>Get in Touch!</h2>
+                <div class="contact-location-row">
+                    <p class="location">Currently:</p>
+                    <div class="contact-city">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Toronto, ON, Canada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <a class="contact-item" href="mailto:jingjw999@gmail.com">
+                    <span>Email</span>
+                    <p>jingjw999@gmail.com</p>
+                </a>
+                <a class="contact-item" href="https://linkedin.com/in/jenny-wu2003" target="_blank">
+                    <span>LinkedIn</span>
+                    <p>linkedin.com/in/jenny-wu2003</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="vocalpoint-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('vocalpoint-modal')">×</button>
+            <h2>VocalPoint — Capstone Project</h2>
+            <p>VocalPoint is a <span class="highlight-file">portable assistive listening device</span> designed to solve <span class="highlight-file">the cocktail party problem</span>. The device improves speech clarity in noisy, multi-speaker environments for hearing aid users.</p>
+            <p>The system uses a microphone array and real-time DSP techniques including beamforming and noise reduction to isolate and amplify a target speaker's voice.</p>
+            <p>I worked on the electrical design and PCB layout in <span class="highlight-file">Altium</span> for a <span class="highlight-file">custom 4-layer Raspberry Pi CM5 carrier board</span> integrating USB-C PD, ESP32 connectivity, multi-channel audio interfaces, and PCIe support for a Hailo-8 AI accelerator.</p>
+            <p>Source code is available on <a href="https://github.com/Hearable-Dongle" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images">
+                <img src="assets/projects/vocalpoint/vocalpoint1.png" alt="VocalPoint project image 1">
+                <img src="assets/projects/vocalpoint/vocalpoint2.png" alt="VocalPoint project image 2">
+                <img src="assets/projects/vocalpoint/vocalpoint3.png" alt="VocalPoint project image 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="snailtype-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('snailtype-modal')">×</button>
+            <h2>snailtype</h2>
+            <p><a href="https://jennnywu.github.io/snailtype/" target="_blank" class="highlight-file">snailtype</a> is a browser-based typing game designed to make typing practice more interactive through animated gameplay and real-time user input.</p>
+            <p>The application combines keyboard interaction, scoring logic, and animated visual elements to create an engaging typing experience.</p>
+            <p>The interface and game structure were built using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> manages gameplay logic, user interaction, and dynamic updates.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/snailtype" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="boxdj-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('boxdj-modal')">×</button>
+            <h2>Box DJ</h2>
+            <p>Box DJ is a <span class="highlight-file">portable DJ mixing system</span> developed during BoxBots, a <span class="highlight-file">2-day cardboard robotics hackathon</span>, as part of a three-person team.</p>
+            <p>The system combines embedded controls, real-time audio processing, and a custom web interface to create a portable music mixing platform housed entirely in cardboard.</p>
+            <p>An <span class="highlight-file">ESP32</span> running <span class="highlight-file">FreeRTOS</span> reads inputs from potentiometers, push buttons, and rotary encoders, while a <span class="highlight-file">Raspberry Pi 5</span> performs audio processing including mixing, equalization, tempo control, and volume adjustment.</p>
+            <p>Processed audio is streamed to Bluetooth speakers or headphones, while a custom web application integrates the <span class="highlight-file">Spotify API</span> to support song selection and queue management.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/box-dj" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images">
+                <video controls muted playsinline preload="metadata">
+                    <source src="assets/projects/boxdj/boxdj1.mp4" type="video/mp4">
+                </video>
+                <video controls playsinline preload="auto">
+                    <source src="assets/projects/boxdj/boxdj2.mp4" type="video/mp4">
+                </video>
+                <img src="assets/projects/boxdj/boxdj3.png" alt="Box DJ prototype">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="cafe-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('cafe-modal')">×</button>
+            <h2>i miss my cafe</h2>
+            <p><a href="https://jennnywu.github.io/i-miss-my-cafe/" target="_blank" class="highlight-file">i miss my cafe</a> is a browser-based study environment inspired by <a href="https://imissmycafe.com/" target="_blank" class="highlight-file">i miss my cafe</a> and <a href="https://www.imissmylibrary.com/" target="_blank" class="highlight-file">i miss my library</a>, designed to recreate focused study spaces through ambient audio and productivity tools.</p>
+            <p>The application combines environmental sound controls with task management features to create a customizable virtual study experience.</p>
+            <p>Content structure was developed using <span class="highlight-file">HTML</span> and styled with <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> was used to implement dynamic audio controls, seamless interaction, and task list functionality.</p>
+            <p>The project focused on frontend development, user experience design, and creating an interactive productivity workflow.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/i-miss-my-cafe" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="pomodoro-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('pomodoro-modal')">×</button>
+            <h2>Pomodoro Timer</h2>
+            <p><a href="https://jennnywu.github.io/pomodoro-timer/" target="_blank" class="highlight-file">Pomodoro Timer</a> is a web-based productivity application designed to help users manage focus sessions using the Pomodoro technique, breaking work into structured intervals with scheduled breaks.</p>
+            <p>The interface was developed using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, featuring customizable controls and selectable visual themes.</p>
+            <p>Timer functionality was implemented in <span class="highlight-file">JavaScript</span>, enabling dynamic countdown logic, work and break interval management, and interactive user controls.</p>
+            <p>The project focused on frontend development, state management, and creating a responsive user experience for productivity workflows.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/pomodoro-timer" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="rccar-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('rccar-modal')">×</button>
+            <h2>Remote Controlled Car</h2>
+            <p>This project involved designing and building a <span class="highlight-file">Bluetooth-controlled vehicle</span> integrating embedded electronics, motor control, and custom mechanical components.</p>
+            <p>The system was built around an <span class="highlight-file">Arduino Uno</span>, paired with an <span class="highlight-file">L298N motor driver</span> and <span class="highlight-file">HM-10 Bluetooth module</span>, with power supplied by a 9V battery.</p>
+            <p>Two DC motors provided propulsion while an <span class="highlight-file">MS18 servo motor</span> controlled steering. Vehicle control was implemented wirelessly through the BLEJoyStick iOS application.</p>
+            <p>The chassis and axle assembly were designed in <span class="highlight-file">SolidWorks</span>, providing a custom frame to integrate the electronics, drivetrain, and steering system.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/rc-car" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images">
+                <img src="assets/projects/rccar/rccar1.jpg" alt="Remote controlled car build">
+                <img src="assets/projects/rccar/rccar2.jpg" alt="RC car CAD model">
+                <img src="assets/projects/rccar/rccar3.jpg" alt="Bluetooth RC car">
+            </div>
+            <p></p>
+            <p>p.s. the car can do donuts 🍩</p>
+        </div>
+    </div>
+
+    <div class="modal" id="handrehab-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('handrehab-modal')">×</button>
+            <h2>Hand Rehabilitation Device</h2>
+            <p>Developed as part of a third-year design project, this hand rehabilitation device was designed to support mobility recovery for individuals with <span class="highlight-file">hemiparesis</span>.</p>
+            <p>The system assists finger rehabilitation using a cable-driven mechanism that gradually guides the fingers into a controlled grasping motion.</p>
+            <p>The device consists of a motor connected to four elastic cords attached to each finger (excluding the thumb). When actuated, the motor retracts the cords to curl the fingers while resistance and force data are monitored through an <span class="highlight-file">Arduino</span> interface.</p>
+            <p>I led on the mechanical development in <span class="highlight-file">SolidWorks</span>, integrating the housing and internal electronics into the rehabilitation device.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images">
+                <img src="assets/projects/handrehab/handrehab1.jpg" alt="Hand rehabilitation device">
+                <img src="assets/projects/handrehab/handrehab2.jpg" alt="SolidWorks model">
+                <img src="assets/projects/handrehab/handrehab3.jpg" alt="Prototype testing">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ebike-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('ebike-modal')">×</button>
+            <h2>Electric Bicycle</h2>
+            <p>As part of <span class="highlight-file">Electrium Mobility</span>, a University of Waterloo student design team focused on sustainable transportation, our team designed and built a fully functional electric bicycle from scratch.</p>
+            <p>Over the summer, our team of 15 collaborated across firmware, electrical, and mechanical development to create an integrated personal electric vehicle platform.</p>
+            <p>I worked on firmware development in <span class="highlight-file">C++</span>, mechanical design in <span class="highlight-file">SolidWorks</span>, and system integration. The project included motor controls, custom circuitry, battery packaging, and frame development using welded aluminum tubing.</p>
+            <p>Within four months, the team successfully produced a working electric bicycle capable of reaching <span class="highlight-file">speeds up to 32 km/h</span>.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images">
+                <img src="assets/projects/ebike/ebike1.jpg" alt="Electric bicycle build">
+                <img src="assets/projects/ebike/ebike2.jpg" alt="Electric bicycle CAD">
+                <img src="assets/projects/ebike/ebike3.jpg" alt="Electric bicycle final build">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="adapter-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('adapter-modal')">×</button>
+            <h2>USB-C PICkit Adapter</h2>
+            <p>During my internship at <span class="highlight-file">Attest Laboratories</span>, I designed and built a custom adapter PCB to interface the <span class="highlight-file">MPLAB® PICkit™ 4 In-Circuit Debugger</span> with USB-C systems.</p>
+            <p>The adapter converts an <span class="highlight-file">8-pin header interface</span> to <span class="highlight-file">USB-C</span>, enabling compatibility with existing debugging workflows while supporting modern connector standards.</p>
+            <p>The design was developed in <span class="highlight-file">KiCAD</span>, including schematic capture, PCB layout, routing, fabrication preparation, assembly, and validation testing.</p>
+            <div class="modal-tags"></div>
+
+            <div class="modal-images">
+                <img src="assets/projects/adapter/adapter1.png"
+                    alt="KiCAD PCB layout">
+                <img src="assets/projects/adapter/adapter2.png"
+                    alt="Physical adapter">
+                <img src="assets/projects/adapter/adapter3.png"
+                    alt="Physical adapter">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="sslchecker-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('sslchecker-modal')">×</button>
+            <h2>SSL Certificate Checker</h2>
+            <p>Developed for <span class="highlight-file">Flutter</span>, this Python tool monitors SSL certificate health and identifies expired, invalid, or soon-to-expire certificates across websites.</p>
+            <p>The application reads URLs from <span class="highlight-file">websites.txt</span> input file and <span class="highlight-file">retrieves SSL certificate information</span> using Python networking libraries.</p>
+            <p>Websites are categorized into expired certificates, expiring certificates, unreachable websites, or valid certificates with expiry reporting.</p>
+            <p>Results are automatically exported to a <span class="highlight-file">results.txt</span> report file for certificate monitoring and auditing.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/ssl-certificate-checker" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="fce-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('fce-modal')">×</button>
+            <h2>FuelCell Energy</h2>
+            <p>Worked as a <span class="highlight-file">Mechatronics Engineering Intern</span> supporting automation, mechanical design, PCB development, and machine vision for fuel cell manufacturing systems.</p>
+            <p>Built a <span class="highlight-file">Raspberry Pi and Python/OpenCV machine vision system</span> to help automate alignment and inspection workflows, improving repeatability in an assembly process.</p>
+            <p>Contributed to fixture design, pneumatic systems, control PCBs, and integration work involving sensors, PLCs, and robotic automation.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="attest-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('attest-modal')">×</button>
+            <h2>Attest Laboratories</h2>
+            <p>I worked on <span class="highlight-file">firmware and software development</span> for a gradient shim module used in a nuclear magnetic resonance (NMR) system to generate controlled spatial magnetic field gradients.</p>
+            <p>The work involved developing <span class="highlight-file">embedded software in C</span>, supporting system integration, and contributing to the operation of precision magnetic field control hardware.</p>
+            <p>I also designed and manufactured <span class="highlight-file">PCBs and adapters in KiCAD</span>, covering circuit design, component selection, verification, BOM generation, and design-for-manufacturing reviews.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="hawaii-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('hawaii-modal')">×</button>
+            <h2>University of Hawai'i</h2>
+            <p>At the University of Hawai'i, I worked on <span class="highlight-file">pulmonary surfactant research</span> investigating how e-cigarette aerosols influence lung surfactant behavior and surface tension dynamics.</p>
+            <p>My work involved designing experimental setups, operating constraint drop surfactometry instrumentation, and collecting measurements to characterize surfactant performance under aerosol exposure.</p>
+            <p>I also developed a <span class="highlight-file">VBA-based automation tool</span> for experimental analysis and figure generation, reducing data processing time by approximately 80%.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="iwc-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('iwc-modal')">×</button>
+            <h2>Impact Without Contact</h2>
+            <p>I Co-founded <span class="highlight-file">Impact Without Contact</span>, a student-led non-profit organization created during the COVID-19 pandemic to support local communities through remote volunteering and digital outreach programs.</p>
+            <p>I contributed to <span class="highlight-file">software development</span> efforts and helped build internal digital tools, websites, and online workflows to coordinate volunteers and community engagement activities.</p>
+            <p>Worked across frontend development, project coordination, and technical implementation while collaborating with multidisciplinary student teams.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="go-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('go-modal')">×</button>
+            <h2>Gymnastics Ontario</h2>
+            <p>Certified <span class="highlight-file">Artistic Gymnastics Judge</span> responsible for evaluating competitive routines across Ontario gymnastics competitions.</p>
+            <p>Applied judging standards to assess execution, technique, artistry, and performance quality while maintaining consistency under time-sensitive competition environments.</p>
+            <p>The role strengthened attention to detail, decision making, communication, and evaluation skills.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="asf-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('asf-modal')">×</button>
+            <h2>Academy Sport and Fitness</h2>
+            <p>Worked as an <span class="highlight-file">Artistic Gymnastics Coach</span>, coaching recreational and competitive athletes aged 3-16 in groups of up to 10 athletes per session.</p>
+            <p>Planned and delivered training sessions focused on technical skill development, safety, and progression across varying skill levels and age groups.</p>
+            <p>Supported athlete development through instruction, mentorship, and individualized coaching approaches while fostering a positive and engaging training environment.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
