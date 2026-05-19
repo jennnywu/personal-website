@@ -225,8 +225,6 @@ section {
     line-height: 1.9;
 }
 
-/* social links */
-
 .social-links {
     display: flex;
     gap: 22px;
@@ -253,8 +251,6 @@ section {
     color: #244733;
     font-size: 22px;
 }
-
-/* resume and portfolio buttons */
 
 .about-buttons {
     display: flex;
