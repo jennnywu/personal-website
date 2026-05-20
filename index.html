@@ -23,7 +23,6 @@
 
             <div class="dropdown-content">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
@@ -31,36 +30,35 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-text">
+    <section id="home" class="hero hero-about">
+        <div class="hero-content">
             <p class="subtitle">Biomedical Engineering • Hardware • Embedded Systems</p>
-            <h1>Jenny Wu's <br>Portfolio</h1>
-        </div>
-    </section>
+            <h1>Jenny Wu</h1>
 
-    <section id="about">
-        <div class="section-title">About Me</div>
-        <div class="about-layout">
-            <div class="about-content">
-                <h2>Hello!</h2>
+            <div class="hero-about-copy">
                 <p>I recently graduated from the University of Waterloo with a Bachelor's degree in Biomedical Engineering, along with a Computing Option and a Medical Artificial Intelligence Specialization.</p>
-                <p>I enjoy building multidisciplinary systems across hardware, embedded software, robotics, and mechanical design, with a focus on human factors.</p>
                 <p>This portfolio showcases some of my work in biomedical engineering, hardware design, and embedded systems.</p>
-                
+            </div>
+
+            <div class="hero-actions">
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/jenny-wu2003" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/jennnywu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jenny-wu2003" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/jennnywu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
-                
+
                 <div class="about-buttons">
-                    <a href="assets/resume/Jenny-Wu-Resume.pdf" target="_blank">My Resume</a>
-                    <a href="assets/portfolio/Jenny-Wu-Portfolio.pdf" target="_blank">My Portfolio</a>
+                    <a href="assets/resume/Jenny-Wu-Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
+                    <a href="assets/portfolio/Jenny-Wu-Portfolio.pdf" target="_blank" rel="noopener noreferrer">My Portfolio</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="projects">
+
+<section id="projects">
         <div class="section-title">Projects</div>
         <div class="projects">
             <div class="project" onclick="openModal('vocalpoint-modal')" data-tags="Altium Designer, Raspberry Pi CM5, ESP32, DSP">
@@ -286,7 +284,7 @@
                     <span>Email</span>
                     <p>jingjw999@gmail.com</p>
                 </a>
-                <a class="contact-item" href="https://linkedin.com/in/jenny-wu2003" target="_blank">
+                <a class="contact-item" href="https://linkedin.com/in/jenny-wu2003" target="_blank" rel="noopener noreferrer">
                     <span>LinkedIn</span>
                     <p>linkedin.com/in/jenny-wu2003</p>
                 </a>
@@ -301,7 +299,7 @@
             <p>VocalPoint is a <span class="highlight-file">portable assistive listening device</span> designed to solve <span class="highlight-file">the cocktail party problem</span>. The device improves speech clarity in noisy, multi-speaker environments for hearing aid users.</p>
             <p>The system uses a microphone array and real-time DSP techniques including beamforming and noise reduction to isolate and amplify a target speaker's voice.</p>
             <p>I worked on the electrical design and PCB layout in <span class="highlight-file">Altium</span> for a <span class="highlight-file">custom 4-layer Raspberry Pi CM5 carrier board</span> integrating USB-C PD, ESP32 connectivity, multi-channel audio interfaces, and PCIe support for a Hailo-8 AI accelerator.</p>
-            <p>Project summary is available <a href="https://seankrose.github.io/UW_BME2026_CapstoneShowcase/TeamHTMLFiles/team06.html" target="_blank" class="highlight-file">here</a>. Source code is available on <a href="https://github.com/Hearable-Dongle" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Project summary is available <a href="https://seankrose.github.io/UW_BME2026_CapstoneShowcase/TeamHTMLFiles/team06.html" target="_blank" rel="noopener noreferrer" class="highlight-file">here</a>. Source code is available on <a href="https://github.com/Hearable-Dongle" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
             <div class="modal-images">
                 <img src="assets/projects/vocalpoint/vocalpoint1.png" alt="VocalPoint project image 1">
@@ -316,10 +314,10 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('snailtype-modal')">×</button>
             <h2>snailtype</h2>
-            <p><a href="https://jennnywu.github.io/snailtype/" target="_blank" class="highlight-file">snailtype</a> is a browser-based typing game designed to make typing practice more interactive through animated gameplay and real-time user input.</p>
+            <p><a href="https://jennnywu.github.io/snailtype/" target="_blank" rel="noopener noreferrer" class="highlight-file">snailtype</a> is a browser-based typing game designed to make typing practice more interactive through animated gameplay and real-time user input.</p>
             <p>The application combines keyboard interaction, scoring logic, and animated visual elements to create an engaging typing experience.</p>
             <p>The interface and game structure were built using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> manages gameplay logic, user interaction, and dynamic updates.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/snailtype" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/snailtype" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
         </div>
     </div>
@@ -332,7 +330,7 @@
             <p>The system combines embedded controls, real-time audio processing, and a custom web interface to create a portable music mixing platform housed entirely in cardboard.</p>
             <p>An <span class="highlight-file">ESP32</span> running <span class="highlight-file">FreeRTOS</span> reads inputs from potentiometers, push buttons, and rotary encoders, while a <span class="highlight-file">Raspberry Pi 5</span> performs audio processing including mixing, equalization, tempo control, and volume adjustment.</p>
             <p>Processed audio is streamed to Bluetooth speakers or headphones, while a custom web application integrates the <span class="highlight-file">Spotify API</span> to support song selection and queue management.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/box-dj" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/box-dj" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
             <div class="modal-images">
                 <video controls muted playsinline preload="metadata">
@@ -350,11 +348,11 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('cafe-modal')">×</button>
             <h2>i miss my cafe</h2>
-            <p><a href="https://jennnywu.github.io/i-miss-my-cafe/" target="_blank" class="highlight-file">i miss my cafe</a> is a browser-based study environment inspired by <a href="https://imissmycafe.com/" target="_blank" class="highlight-file">i miss my cafe</a> and <a href="https://www.imissmylibrary.com/" target="_blank" class="highlight-file">i miss my library</a>, designed to recreate focused study spaces through ambient audio and productivity tools.</p>
+            <p><a href="https://jennnywu.github.io/i-miss-my-cafe/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> is a browser-based study environment inspired by <a href="https://imissmycafe.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> and <a href="https://www.imissmylibrary.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my library</a>, designed to recreate focused study spaces through ambient audio and productivity tools.</p>
             <p>The application combines environmental sound controls with task management features to create a customizable virtual study experience.</p>
             <p>Content structure was developed using <span class="highlight-file">HTML</span> and styled with <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> was used to implement dynamic audio controls, seamless interaction, and task list functionality.</p>
             <p>The project focused on frontend development, user experience design, and creating an interactive productivity workflow.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/i-miss-my-cafe" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/i-miss-my-cafe" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
         </div>
     </div>
@@ -363,11 +361,11 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('pomodoro-modal')">×</button>
             <h2>Pomodoro Timer</h2>
-            <p><a href="https://jennnywu.github.io/pomodoro-timer/" target="_blank" class="highlight-file">Pomodoro Timer</a> is a web-based productivity application designed to help users manage focus sessions using the Pomodoro technique, breaking work into structured intervals with scheduled breaks.</p>
+            <p><a href="https://jennnywu.github.io/pomodoro-timer/" target="_blank" rel="noopener noreferrer" class="highlight-file">Pomodoro Timer</a> is a web-based productivity application designed to help users manage focus sessions using the Pomodoro technique, breaking work into structured intervals with scheduled breaks.</p>
             <p>The interface was developed using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, featuring customizable controls and selectable visual themes.</p>
             <p>Timer functionality was implemented in <span class="highlight-file">JavaScript</span>, enabling dynamic countdown logic, work and break interval management, and interactive user controls.</p>
             <p>The project focused on frontend development, state management, and creating a responsive user experience for productivity workflows.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/pomodoro-timer" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/pomodoro-timer" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
         </div>
     </div>
@@ -380,7 +378,7 @@
             <p>The system was built around an <span class="highlight-file">Arduino Uno</span>, paired with an <span class="highlight-file">L298N motor driver</span> and <span class="highlight-file">HM-10 Bluetooth module</span>, with power supplied by a 9V battery.</p>
             <p>Two DC motors provided propulsion while an <span class="highlight-file">MS18 servo motor</span> controlled steering. Vehicle control was implemented wirelessly through the BLEJoyStick iOS application.</p>
             <p>The chassis and axle assembly were designed in <span class="highlight-file">SolidWorks</span>, providing a custom frame to integrate the electronics, drivetrain, and steering system.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/rc-car" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/rc-car" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
             <div class="modal-images">
                 <img src="assets/projects/rccar/rccar1.jpg" alt="Remote controlled car build">
@@ -454,7 +452,7 @@
             <p>The application reads URLs from <span class="highlight-file">websites.txt</span> input file and <span class="highlight-file">retrieves SSL certificate information</span> using Python networking libraries.</p>
             <p>Websites are categorized into expired certificates, expiring certificates, unreachable websites, or valid certificates with expiry reporting.</p>
             <p>Results are automatically exported to a <span class="highlight-file">results.txt</span> report file for certificate monitoring and auditing.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/ssl-certificate-checker" target="_blank" class="highlight-file">GitHub</a>.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/ssl-certificate-checker" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
         </div>
     </div>
