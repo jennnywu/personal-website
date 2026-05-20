@@ -349,34 +349,32 @@ section {
     transform: scale(1.02);
 }
 
-.project h3 {
-    margin-bottom: 18px;
-    color: #244733;
-    font-size: 18px;
-}
 .project h3 span {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
+    display: inline;
+    background-image: linear-gradient(
+        rgba(205,226,212,.75),
+        rgba(205,226,212,.75)
+    );
+    background-repeat: no-repeat;
+    background-size: 0% .9em;
+    background-position: 0 58%;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    transition: background-size .35s cubic-bezier(.25,.8,.25,1);
 }
+
 .project h3 span::before {
-    content: "";
-    position: absolute;
-    left: -4px;
-    right: -4px;
-    top: 58%;
-    height: .9em;
-    background: rgba(205,226,212,.75);
-    border-radius: 2px;
-    transform: translateY(-50%) scaleX(0);
-    transform-origin: left center;
-    transition: transform .35s cubic-bezier(.25,.8,.25,1);
-    z-index: -1;
+    content: none;
+}
+
+.project:hover h3 span {
+    background-size: 100% .9em;
 }
 
 .project:hover h3 span::before {
     transform: translateY(-50%) scaleX(1);
 }
+
 .project:hover h3 {
     color: #315f46;
 }
