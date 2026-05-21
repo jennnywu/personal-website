@@ -1,5 +1,5 @@
 function populateTags() {
-    document.querySelectorAll(".project").forEach(project => {
+    document.querySelectorAll(".project, .exp-card").forEach(project => {
         const tags = project.dataset.tags?.split(",");
         const projectTags = project.querySelector(".project-tags");
 
@@ -17,12 +17,9 @@ function populateTags() {
 
 function openModal(id) {
     const modal = document.getElementById(id);
-
     if (!modal) return;
 
-    const project = document.querySelector(
-        `[onclick="openModal('${id}')"]`
-    );
+    const project = document.querySelector(`[onclick="openModal('${id}')"]`);
 
     if (project) {
         const tags = project.dataset.tags?.split(",");
@@ -45,17 +42,22 @@ function openModal(id) {
 
 function closeModal(id) {
     const modal = document.getElementById(id);
-
     if (!modal) return;
 
     modal.classList.remove("active");
-
-    const activeModals = document.querySelectorAll(".modal.active");
-
-    if (activeModals.length === 0) {
-        document.body.style.overflow = "";
-    }
+    document.body.style.overflow = "";
 }
+
+document.querySelector(".dropbtn")?.addEventListener("click", function(e) {
+    e.stopPropagation();
+    document.querySelector(".dropdown")?.classList.toggle("open");
+});
+
+document.querySelectorAll(".dropdown-content a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector(".dropdown")?.classList.remove("open");
+    });
+});
 
 document.addEventListener("keydown", function(e) {
     if (e.key === "Escape") {
@@ -74,6 +76,10 @@ document.addEventListener("click", function(e) {
             closeModal(modal.id);
         }
     });
+
+    if (!e.target.closest(".dropdown")) {
+        document.querySelector(".dropdown")?.classList.remove("open");
+    }
 });
 
 populateTags();

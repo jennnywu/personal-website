@@ -952,3 +952,248 @@ section {
         font-size: 16px;
     }
 }
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.dropdown.open .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.dropdown.open .dropbtn span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.dropdown.open .dropbtn span:nth-child(2) {
+    opacity: 0;
+}
+
+.dropdown.open .dropbtn span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.project h3 span,
+.highlight-file,
+.modal-content a {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+@media (hover: none) {
+    .dropdown:hover .dropdown-content {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px) scale(.98);
+    }
+
+    .dropdown.open .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 18px;
+    }
+
+    .dropbtn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero-about {
+        min-height: auto;
+        padding: 100px 22px 56px;
+        align-items: flex-start;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        line-height: 1.6;
+        letter-spacing: 1.4px;
+    }
+
+    .hero-about h1 {
+        font-size: 44px;
+        white-space: normal;
+        margin-bottom: 26px;
+    }
+
+    .hero-about-copy p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-top: 24px;
+    }
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links a {
+        width: 48px;
+        height: 48px;
+    }
+
+    .about-buttons {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .about-buttons a {
+        flex: 1;
+        justify-content: center;
+        padding: 13px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    section {
+        padding: 90px 22px;
+    }
+
+    .projects {
+        gap: 28px;
+    }
+
+    .project {
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .project img {
+        height: 210px;
+        border-radius: 16px;
+        margin-bottom: 22px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .project p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    .modal {
+        padding: 14px;
+        transition: opacity .15s ease, visibility .15s ease;
+    }
+
+    .modal-content {
+        padding: 72px 22px 28px;
+        border-radius: 24px;
+        transform: none;
+        transition: opacity .15s ease;
+    }
+
+    .modal.active .modal-content {
+        transform: none;
+    }
+
+    .modal-content h2 {
+        font-size: 26px;
+        line-height: 1.25;
+        margin-bottom: 24px;
+        padding-right: 42px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+        line-height: 1;
+    }
+
+    .modal-images,
+    .modal-images.portrait {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .modal-images img,
+    .modal-images video,
+    .modal-images.portrait img {
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        background: none;
+        border-radius: 18px;
+    }
+
+    .timeline {
+        padding-left: 28px;
+        gap: 28px;
+    }
+
+    .exp-card {
+        padding: 26px 22px;
+    }
+
+    .exp-card::before {
+        left: -28px;
+    }
+
+    .exp-card::after {
+        left: -18px;
+        width: 18px;
+    }
+
+    .exp-location,
+    .edu-location,
+    .contact-city {
+        white-space: normal;
+    }
+
+    .education-card,
+    .contact-card {
+        padding: 28px 22px;
+        border-radius: 24px;
+    }
+
+    .contact-header h2 {
+        font-size: 30px;
+    }
+
+    .highlight-file::before,
+    .modal-content a::before {
+        display: none;
+    }
+
+    .highlight-file,
+    .modal-content a {
+        background-image: linear-gradient(
+            rgba(205,226,212,.75),
+            rgba(205,226,212,.75)
+        );
+        background-repeat: no-repeat;
+        background-size: 100% .9em;
+        background-position: 0 58%;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+}
