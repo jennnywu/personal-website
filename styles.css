@@ -786,6 +786,14 @@ section {
     display: block;
 }
 
+.modal-images.portrait {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-images.portrait img {
+    aspect-ratio: 1/1;
+}
+
 .close-btn {
     position: fixed;
     top: 28px;

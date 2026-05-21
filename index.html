@@ -69,10 +69,18 @@
                 <div class="expand-label">Click to expand ↓</div>
             </div>
 
-            <div class="project" onclick="openModal('snailtype-modal')" data-tags="HTML, CSS, JavaScript, Game Dev">
-                <img src="assets/projects/snailtype/snailtype-thumbnail.png" alt="SnailType project">
-                <h3><span>snailtype</span></h3>
-                <p>Typing practice game combining animated gameplay, scoring, and keyboard interaction.</p>
+            <div class="project" onclick="openModal('velocimetry-modal')" data-tags="Altium Designer, Teensy 4.0, PCB Design, Sensors, PLC">
+                <img src="assets/projects/velocimetry/velocimetry-thumbnail.png" alt="Optical Flow Velocimetry PCB">
+                <h3><span>Optical Flow Velocimetry PCB</span></h3>
+                <p>Custom PCB integrating an optical flow sensor and distance sensor to measure conveyor belt speed on a manufacturing assembly line.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('adapter-modal')" data-tags="KiCAD, PCB Layout, USB-C, Hardware Bring-Up">
+                <img src="assets/projects/adapter/adapter-thumbnail.png" alt="USB-C PICkit Adapter project">
+                <h3><span>USB-C PICkit Adapter</span></h3>
+                <p>Custom PCB adapter enabling USB-C compatibility for PICkit 4 debugging workflows.</p>
                 <div class="project-tags"></div>
                 <div class="expand-label">Click to expand ↓</div>
             </div>
@@ -81,22 +89,6 @@
                 <img src="assets/projects/boxdj/boxdj-thumbnail.png" alt="Box DJ project">
                 <h3><span>Box DJ</span></h3>
                 <p>Portable DJ mixing system integrating embedded controls, audio processing, and Spotify integration.</p>
-                <div class="project-tags"></div>
-                <div class="expand-label">Click to expand ↓</div>
-            </div>
-
-            <div class="project" onclick="openModal('cafe-modal')" data-tags="HTML, CSS, JavaScript, Productivity">
-                <img src="assets/projects/cafe/cafe-thumbnail.png" alt="i miss my cafe project">
-                <h3><span>i miss my cafe</span></h3>
-                <p>Ambient study application combining task management and customizable background audio.</p>
-                <div class="project-tags"></div>
-                <div class="expand-label">Click to expand ↓</div>
-            </div>
-            
-            <div class="project" onclick="openModal('pomodoro-modal')" data-tags="HTML, CSS, JavaScript, Productivity">
-                <img src="assets/projects/pomodoro/pomodoro-thumbnail.png" alt="Pomodoro Timer project">
-                <h3><span>Pomodoro Timer</span></h3>
-                <p>Web-based productivity application implementing customizable Pomodoro work cycles and themes.</p>
                 <div class="project-tags"></div>
                 <div class="expand-label">Click to expand ↓</div>
             </div>
@@ -125,10 +117,26 @@
                 <div class="expand-label">Click to expand ↓</div>
             </div>
 
-            <div class="project" onclick="openModal('adapter-modal')" data-tags="KiCAD, PCB Layout, USB-C, Hardware Bring-Up">
-                <img src="assets/projects/adapter/adapter-thumbnail.png" alt="USB-C PICkit Adapter project">
-                <h3><span>USB-C PICkit Adapter</span></h3>
-                <p>Custom PCB adapter enabling USB-C compatibility for PICkit 4 debugging workflows.</p>
+            <div class="project" onclick="openModal('snailtype-modal')" data-tags="HTML, CSS, JavaScript, Game Dev">
+                <img src="assets/projects/snailtype/snailtype-thumbnail.png" alt="SnailType project">
+                <h3><span>snailtype</span></h3>
+                <p>Typing practice game combining animated gameplay, scoring, and keyboard interaction.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('cafe-modal')" data-tags="HTML, CSS, JavaScript, Productivity">
+                <img src="assets/projects/cafe/cafe-thumbnail.png" alt="i miss my cafe project">
+                <h3><span>i miss my cafe</span></h3>
+                <p>Ambient study application combining task management and customizable background audio.</p>
+                <div class="project-tags"></div>
+                <div class="expand-label">Click to expand ↓</div>
+            </div>
+
+            <div class="project" onclick="openModal('pomodoro-modal')" data-tags="HTML, CSS, JavaScript, Productivity">
+                <img src="assets/projects/pomodoro/pomodoro-thumbnail.png" alt="Pomodoro Timer project">
+                <h3><span>Pomodoro Timer</span></h3>
+                <p>Web-based productivity application implementing customizable Pomodoro work cycles and themes.</p>
                 <div class="project-tags"></div>
                 <div class="expand-label">Click to expand ↓</div>
             </div>
@@ -333,10 +341,10 @@
             <p>Source code is available on <a href="https://github.com/jennnywu/box-dj" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
             <div class="modal-tags"></div>
             <div class="modal-images">
-                <video controls muted playsinline preload="metadata">
+                <video autoplay loop muted playsinline preload="auto">
                     <source src="assets/projects/boxdj/boxdj1.mp4" type="video/mp4">
                 </video>
-                <video controls playsinline preload="auto">
+                <video autoplay loop muted playsinline preload="auto">
                     <source src="assets/projects/boxdj/boxdj2.mp4" type="video/mp4">
                 </video>
                 <img src="assets/projects/boxdj/boxdj3.png" alt="Box DJ prototype">
@@ -522,6 +530,22 @@
             <div class="modal-tags"></div>
         </div>
     </div>
+    <div class="modal" id="velocimetry-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('velocimetry-modal')">×</button>
+            <h2>Optical Flow Velocimetry PCB</h2>
+            <p>Designed and built a <span class="highlight-file">custom PCB</span> during my internship at <span class="highlight-file">FuelCell Energy</span> to measure conveyor belt speed on the fuel cell assembly line.</p>
+            <p>The board integrates an <span class="highlight-file">optical flow sensor</span> and a <span class="highlight-file">distance sensor</span> on one side to detect the velocity of the belt as it passes beneath. A <span class="highlight-file">Teensy 4.0</span> on the reverse side processes the sensor data and reports speed readings over serial to a <span class="highlight-file">PLC</span>, enabling real-time monitoring of the assembly line.</p>
+            <div class="modal-tags"></div>
+            <div class="modal-images portrait">
+                <img src="assets/projects/velocimetry/velocimetry1.png" alt="Optical flow sensor PCB">
+                <img src="assets/projects/velocimetry/velocimetry2.png" alt="Optical flow sensor PCB front">
+                <img src="assets/projects/velocimetry/velocimetry3.png" alt="Optical flow sensor PCB back">
+                <img src="assets/projects/velocimetry/velocimetry4.png" alt="Optical flow sensor PCB wired">
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
