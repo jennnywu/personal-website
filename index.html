@@ -301,6 +301,9 @@
     </section>
 
     <div class="modal" id="vocalpoint-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('vocalpoint-modal')">×</button>
             <h2>VocalPoint — Capstone Project</h2>
@@ -318,19 +321,52 @@
         </div>
     </div>
 
-    <div class="modal" id="snailtype-modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('snailtype-modal')">×</button>
-            <h2>snailtype</h2>
-            <p><a href="https://jennnywu.github.io/snailtype/" target="_blank" rel="noopener noreferrer" class="highlight-file">snailtype</a> is a browser-based typing game designed to make typing practice more interactive through animated gameplay and real-time user input.</p>
-            <p>The application combines keyboard interaction, scoring logic, and animated visual elements to create an engaging typing experience.</p>
-            <p>The interface and game structure were built using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> manages gameplay logic, user interaction, and dynamic updates.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/snailtype" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
+    <div class="modal" id="velocimetry-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
+        <div class="modal-content">    
+            <button class="close-btn" onclick="closeModal('velocimetry-modal')">×</button>
+            <h2>Optical Flow Velocimetry PCB</h2>
+            <p>Designed and built a <span class="highlight-file">custom PCB</span> during my internship at <span class="highlight-file">FuelCell Energy</span> to measure conveyor belt speed on the fuel cell assembly line.</p>
+            <p>The board integrates an <span class="highlight-file">optical flow sensor</span> and a <span class="highlight-file">distance sensor</span> on one side to detect the velocity of the belt as it passes beneath. A <span class="highlight-file">Teensy 4.0</span> on the reverse side processes the sensor data and reports speed readings over serial to a <span class="highlight-file">PLC</span>, enabling real-time monitoring of the assembly line.</p>
             <div class="modal-tags"></div>
+            <div class="modal-images portrait">
+                <img src="assets/projects/velocimetry/velocimetry1.png" alt="Optical flow sensor PCB">
+                <img src="assets/projects/velocimetry/velocimetry2.png" alt="Optical flow sensor PCB front">
+                <img src="assets/projects/velocimetry/velocimetry3.png" alt="Optical flow sensor PCB back">
+                <img src="assets/projects/velocimetry/velocimetry4.png" alt="Optical flow sensor PCB wired">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="adapter-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('adapter-modal')">×</button>
+            <h2>USB-C PICkit Adapter</h2>
+            <p>During my internship at <span class="highlight-file">Attest Laboratories</span>, I designed and built a custom adapter PCB to interface the <span class="highlight-file">MPLAB® PICkit™ 4 In-Circuit Debugger</span> with USB-C systems.</p>
+            <p>The adapter converts an <span class="highlight-file">8-pin header interface</span> to <span class="highlight-file">USB-C</span>, enabling compatibility with existing debugging workflows while supporting modern connector standards.</p>
+            <p>The design was developed in <span class="highlight-file">KiCAD</span>, including schematic capture, PCB layout, routing, fabrication preparation, assembly, and validation testing.</p>
+            <div class="modal-tags"></div>
+
+            <div class="modal-images">
+                <img src="assets/projects/adapter/adapter1.png"
+                    alt="KiCAD PCB layout">
+                <img src="assets/projects/adapter/adapter2.png"
+                    alt="Physical adapter">
+                <img src="assets/projects/adapter/adapter3.png"
+                    alt="Physical adapter">
+            </div>
         </div>
     </div>
 
     <div class="modal" id="boxdj-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('boxdj-modal')">×</button>
             <h2>Box DJ</h2>
@@ -352,33 +388,10 @@
         </div>
     </div>
 
-    <div class="modal" id="cafe-modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('cafe-modal')">×</button>
-            <h2>i miss my cafe</h2>
-            <p><a href="https://jennnywu.github.io/i-miss-my-cafe/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> is a browser-based study environment inspired by <a href="https://imissmycafe.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> and <a href="https://www.imissmylibrary.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my library</a>, designed to recreate focused study spaces through ambient audio and productivity tools.</p>
-            <p>The application combines environmental sound controls with task management features to create a customizable virtual study experience.</p>
-            <p>Content structure was developed using <span class="highlight-file">HTML</span> and styled with <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> was used to implement dynamic audio controls, seamless interaction, and task list functionality.</p>
-            <p>The project focused on frontend development, user experience design, and creating an interactive productivity workflow.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/i-miss-my-cafe" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
-            <div class="modal-tags"></div>
-        </div>
-    </div>
-
-    <div class="modal" id="pomodoro-modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('pomodoro-modal')">×</button>
-            <h2>Pomodoro Timer</h2>
-            <p><a href="https://jennnywu.github.io/pomodoro-timer/" target="_blank" rel="noopener noreferrer" class="highlight-file">Pomodoro Timer</a> is a web-based productivity application designed to help users manage focus sessions using the Pomodoro technique, breaking work into structured intervals with scheduled breaks.</p>
-            <p>The interface was developed using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, featuring customizable controls and selectable visual themes.</p>
-            <p>Timer functionality was implemented in <span class="highlight-file">JavaScript</span>, enabling dynamic countdown logic, work and break interval management, and interactive user controls.</p>
-            <p>The project focused on frontend development, state management, and creating a responsive user experience for productivity workflows.</p>
-            <p>Source code is available on <a href="https://github.com/jennnywu/pomodoro-timer" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
-            <div class="modal-tags"></div>
-        </div>
-    </div>
-
     <div class="modal" id="rccar-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('rccar-modal')">×</button>
             <h2>Remote Controlled Car</h2>
@@ -399,6 +412,9 @@
     </div>
 
     <div class="modal" id="handrehab-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('handrehab-modal')">×</button>
             <h2>Hand Rehabilitation Device</h2>
@@ -416,6 +432,9 @@
     </div>
 
     <div class="modal" id="ebike-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('ebike-modal')">×</button>
             <h2>Electric Bicycle</h2>
@@ -432,27 +451,57 @@
         </div>
     </div>
 
-    <div class="modal" id="adapter-modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('adapter-modal')">×</button>
-            <h2>USB-C PICkit Adapter</h2>
-            <p>During my internship at <span class="highlight-file">Attest Laboratories</span>, I designed and built a custom adapter PCB to interface the <span class="highlight-file">MPLAB® PICkit™ 4 In-Circuit Debugger</span> with USB-C systems.</p>
-            <p>The adapter converts an <span class="highlight-file">8-pin header interface</span> to <span class="highlight-file">USB-C</span>, enabling compatibility with existing debugging workflows while supporting modern connector standards.</p>
-            <p>The design was developed in <span class="highlight-file">KiCAD</span>, including schematic capture, PCB layout, routing, fabrication preparation, assembly, and validation testing.</p>
-            <div class="modal-tags"></div>
+    <div class="modal" id="snailtype-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
 
-            <div class="modal-images">
-                <img src="assets/projects/adapter/adapter1.png"
-                    alt="KiCAD PCB layout">
-                <img src="assets/projects/adapter/adapter2.png"
-                    alt="Physical adapter">
-                <img src="assets/projects/adapter/adapter3.png"
-                    alt="Physical adapter">
-            </div>
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('snailtype-modal')">×</button>
+            <h2>snailtype</h2>
+            <p><a href="https://jennnywu.github.io/snailtype/" target="_blank" rel="noopener noreferrer" class="highlight-file">snailtype</a> is a browser-based typing game designed to make typing practice more interactive through animated gameplay and real-time user input.</p>
+            <p>The application combines keyboard interaction, scoring logic, and animated visual elements to create an engaging typing experience.</p>
+            <p>The interface and game structure were built using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> manages gameplay logic, user interaction, and dynamic updates.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/snailtype" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="cafe-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('cafe-modal')">×</button>
+            <h2>i miss my cafe</h2>
+            <p><a href="https://jennnywu.github.io/i-miss-my-cafe/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> is a browser-based study environment inspired by <a href="https://imissmycafe.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my cafe</a> and <a href="https://www.imissmylibrary.com/" target="_blank" rel="noopener noreferrer" class="highlight-file">i miss my library</a>, designed to recreate focused study spaces through ambient audio and productivity tools.</p>
+            <p>The application combines environmental sound controls with task management features to create a customizable virtual study experience.</p>
+            <p>Content structure was developed using <span class="highlight-file">HTML</span> and styled with <span class="highlight-file">CSS</span>, while <span class="highlight-file">JavaScript</span> was used to implement dynamic audio controls, seamless interaction, and task list functionality.</p>
+            <p>The project focused on frontend development, user experience design, and creating an interactive productivity workflow.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/i-miss-my-cafe" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="pomodoro-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('pomodoro-modal')">×</button>
+            <h2>Pomodoro Timer</h2>
+            <p><a href="https://jennnywu.github.io/pomodoro-timer/" target="_blank" rel="noopener noreferrer" class="highlight-file">Pomodoro Timer</a> is a web-based productivity application designed to help users manage focus sessions using the Pomodoro technique, breaking work into structured intervals with scheduled breaks.</p>
+            <p>The interface was developed using <span class="highlight-file">HTML</span> and <span class="highlight-file">CSS</span>, featuring customizable controls and selectable visual themes.</p>
+            <p>Timer functionality was implemented in <span class="highlight-file">JavaScript</span>, enabling dynamic countdown logic, work and break interval management, and interactive user controls.</p>
+            <p>The project focused on frontend development, state management, and creating a responsive user experience for productivity workflows.</p>
+            <p>Source code is available on <a href="https://github.com/jennnywu/pomodoro-timer" target="_blank" rel="noopener noreferrer" class="highlight-file">GitHub</a>.</p>
+            <div class="modal-tags"></div>
         </div>
     </div>
 
     <div class="modal" id="sslchecker-modal">
+        <button class="modal-nav prev">←</button>
+        <button class="modal-nav next">→</button>
+
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('sslchecker-modal')">×</button>
             <h2>SSL Certificate Checker</h2>
@@ -528,21 +577,6 @@
             <p>Planned and delivered training sessions focused on technical skill development, safety, and progression across varying skill levels and age groups.</p>
             <p>Supported athlete development through instruction, mentorship, and individualized coaching approaches while fostering a positive and engaging training environment.</p>
             <div class="modal-tags"></div>
-        </div>
-    </div>
-    <div class="modal" id="velocimetry-modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('velocimetry-modal')">×</button>
-            <h2>Optical Flow Velocimetry PCB</h2>
-            <p>Designed and built a <span class="highlight-file">custom PCB</span> during my internship at <span class="highlight-file">FuelCell Energy</span> to measure conveyor belt speed on the fuel cell assembly line.</p>
-            <p>The board integrates an <span class="highlight-file">optical flow sensor</span> and a <span class="highlight-file">distance sensor</span> on one side to detect the velocity of the belt as it passes beneath. A <span class="highlight-file">Teensy 4.0</span> on the reverse side processes the sensor data and reports speed readings over serial to a <span class="highlight-file">PLC</span>, enabling real-time monitoring of the assembly line.</p>
-            <div class="modal-tags"></div>
-            <div class="modal-images portrait">
-                <img src="assets/projects/velocimetry/velocimetry1.png" alt="Optical flow sensor PCB">
-                <img src="assets/projects/velocimetry/velocimetry2.png" alt="Optical flow sensor PCB front">
-                <img src="assets/projects/velocimetry/velocimetry3.png" alt="Optical flow sensor PCB back">
-                <img src="assets/projects/velocimetry/velocimetry4.png" alt="Optical flow sensor PCB wired">
-            </div>
         </div>
     </div>
 
