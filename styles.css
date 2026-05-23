@@ -970,17 +970,20 @@ section {
     .header {
         padding: 24px;
     }
+
     .hero,
     section {
         padding-left: 8%;
         padding-right: 8%;
     }
+
     .projects,
     .education-grid,
     .contact-grid,
     .modal-images {
         grid-template-columns: 1fr;
     }
+
     .hero h1 {
         font-size: 52px;
     }
@@ -989,9 +992,11 @@ section {
         padding-top: 120px;
         padding-bottom: 90px;
     }
+
     .hero-about-copy p {
         font-size: 15px;
     }
+    
     .hero-actions {
         gap: 24px;
     }
@@ -999,19 +1004,24 @@ section {
     .about-content h2 {
         font-size: 32px;
     }
+
     .exp-top {
         flex-direction: column;
         gap: 20px;
     }
+
     .modal {
         padding: 20px;
     }
+
     .modal-content {
         padding: 36px;
     }
+    
     .modal-content h2 {
         font-size: 34px;
     }
+
     .modal-content p {
         font-size: 16px;
     }
@@ -1250,10 +1260,7 @@ body {
 
     .highlight-file,
     .modal-content a {
-        background-image: linear-gradient(
-            rgba(205,226,212,.75),
-            rgba(205,226,212,.75)
-        );
+        background-image: linear-gradient(rgba(205,226,212,.75),rgba(205,226,212,.75));
         background-repeat: no-repeat;
         background-size: 100% .9em;
         background-position: 0 58%;
