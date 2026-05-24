@@ -168,4 +168,12 @@ document.querySelectorAll(".project").forEach(project => {
     });
 });
 
+document.querySelectorAll(".about-buttons a").forEach(btn => {
+    btn.addEventListener("click", () => {
+        gtag("event", "document_open", {
+            document: btn.innerText
+        });
+    });
+});
+
 populateTags();
