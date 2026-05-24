@@ -160,4 +160,12 @@ function updateModalScroll(modal) {
     });
 }
 
+document.querySelectorAll(".project").forEach(project => {
+    project.addEventListener("click", () => {
+        gtag("event", "project_open", {
+            project: project.querySelector("h3").innerText
+        });
+    });
+});
+
 populateTags();
